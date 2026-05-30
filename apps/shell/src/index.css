@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  body {
+    @apply bg-zinc-950 text-zinc-100 font-sans select-none;
+    background-color: #08080a;
+  }
+  
+  /* Minimalist developer scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.16);
+  }
+
+  /* Quiet Premium Selection */
+  ::selection {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+  }
+}
+
+/* Translucent Premium Glass Backdrops with Micro-Grain and Multi-Layer Inset Highlights */
+.cyber-glass {
+  background: rgba(12, 12, 16, 0.42);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.012'/%3E%3C/svg%3E");
+  backdrop-filter: blur(28px) saturate(160%);
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 
+    /* Primary beveled highlight on top */
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.07),
+    /* Soft beveled highlight on left */
+    inset 1px 0 0 0 rgba(255, 255, 255, 0.02),
+    /* Inset shadow on bottom to give material edge thickness */
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.4),
+    /* High-end ambient occlusion drop shadows */
+    0 4px 20px -2px rgba(0, 0, 0, 0.4),
+    0 24px 60px -15px rgba(0, 0, 0, 0.75);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cyber-glass-heavy {
+  background: rgba(10, 10, 12, 0.76);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.04) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.018'/%3E%3C/svg%3E");
+  backdrop-filter: blur(36px) saturate(170%);
+  -webkit-backdrop-filter: blur(36px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.09),
+    inset 1px 0 0 0 rgba(255, 255, 255, 0.03),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.5),
+    0 8px 32px -3px rgba(0, 0, 0, 0.55),
+    0 32px 80px -20px rgba(0, 0, 0, 0.85);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Premium Restrained Palette Themes */
+.theme-cyan {
+  --theme-color: #3b82f6; /* Linear Blue */
+  --theme-color-rgb: 59, 130, 246;
+  --glow-color: rgba(59, 130, 246, 0.1);
+  --shadow-glow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(59, 130, 246, 0.15);
+}
+
+.theme-purple {
+  --theme-color: #8b5cf6; /* Royal Purple */
+  --theme-color-rgb: 139, 92, 246;
+  --glow-color: rgba(139, 92, 246, 0.1);
+  --shadow-glow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(139, 92, 246, 0.15);
+}
+
+.theme-green {
+  --theme-color: #10b981; /* Premium Emerald */
+  --theme-color-rgb: 16, 185, 129;
+  --glow-color: rgba(16, 185, 129, 0.1);
+  --shadow-glow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(16, 185, 129, 0.15);
+}
+
+.theme-orange {
+  --theme-color: #f59e0b; /* Amber */
+  --theme-color-rgb: 245, 158, 11;
+  --glow-color: rgba(245, 158, 11, 0.1);
+  --shadow-glow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(245, 158, 11, 0.15);
+}
+
+/* Minimal Utilities */
+.cyber-glow {
+  text-shadow: none;
+}
+
+.cyber-border-active {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 20px 48px -10px rgba(0, 0, 0, 0.7);
+}
+
+.cyber-text-active {
+  color: var(--theme-color);
+}
+
+.cyber-bg-active {
+  background-color: var(--theme-color);
+}
+
+/* Clean developer grid overlay (ultra-faint) */
+.grid-overlay {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.005) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.005) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Calm fade-in animation */
+@keyframes menu-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.98) translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-menuFadeIn {
+  animation: menu-fade-in 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Shadows matching professional dashboards */
+.shadow-dock {
+  box-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.shadow-neon-cyan,
+.shadow-neon-purple,
+.shadow-neon-green,
+.shadow-neon-orange {
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+}
+
+/* Global fadeIn keyframe for overlay transitions */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ======================================================
+   GLOBAL DOCKED WINDOW & WIDGET GLASS COMPOSITION OVERRIDES
+   ====================================================== */
+
+/* Make all window outer frames share a sleek dark glass theme */
+.window-frame {
+  background: rgba(10, 10, 14, 0.48) !important;
+  backdrop-filter: blur(28px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(160%) !important;
+  box-shadow: 
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    inset 1px 0 0 0 rgba(255, 255, 255, 0.03),
+    0 16px 48px -12px rgba(0, 0, 0, 0.72) !important;
+}
+
+/* Make all window interior panels transparent to show the dark glass backplate */
+.window-frame .flex-1[class*="bg-[#07090c]"],
+.window-frame .flex-1[class*="bg-[#09090b]"],
+.window-frame .flex-1[class*="bg-[#0b0b0e]"],
+.window-frame .flex-1[class*="bg-[#0c0c0e]"],
+.window-frame [class*="bg-[#07090c]"],
+.window-frame [class*="bg-[#09090b]"] {
+  background-color: transparent !important;
+}
+
+/* Add a beautiful frosted look to inner headers and toolbars */
+.window-frame div[class*="bg-[#050608]"],
+.window-frame div[class*="bg-[#090b0e]"],
+.window-frame div[class*="bg-[#0a0d11]"],
+.window-frame div[class*="bg-[#0d0d10]"] {
+  background-color: rgba(255, 255, 255, 0.015) !important;
+  backdrop-filter: blur(12px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(130%) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Force sidebars and note listing sheets to have a subtle contrast layer */
+.window-frame .w-40[class*="bg-[#0a0d11]"],
+.window-frame .w-64[class*="bg-[#0a0d11]"],
+.window-frame .w-1\/2[class*="bg-[#030406]"] {
+  background-color: rgba(0, 0, 0, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* Elevate interior container cards and files cells to be clean frosted modules */
+.window-frame article[class*="bg-[#0a0c10]"],
+.window-frame div[class*="bg-[#0a0c10]"],
+.window-frame div[class*="bg-[#080a0d]"],
+.window-frame div[class*="bg-[#030406]"],
+.window-frame input[class*="bg-[#050608]"],
+.window-frame select[class*="bg-[#050608]"],
+.window-frame textarea[class*="bg-[#050608]"] {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.window-frame .grid[class*="bg-[#030406]"] {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+/* ======================================================
+   CUSTOM 3D GLASS CURSOR GLOBAL CURSOR DISABLE
+   ====================================================== */
+html, body, #root, a, button, input, select, textarea, [role="button"], * {
+  cursor: none !important;
+}
+
+/* ======================================================
+   ENVIRONMENTAL STATE COMPOSITIONS (MODE TRANSFORMATIONS)
+   ====================================================== */
+
+/* 1. Development Mode ('dev') */
+.mode-dev {
+  --ambient-glow: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.08) 0%, transparent 80%);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mode-dev .desktop-wallpaper {
+  filter: brightness(0.48) contrast(1.06) saturate(0.82) blur(4px) !important;
+  opacity: 0.95;
+  transition: filter 1.2s ease-in-out, opacity 1.2s ease-in-out, transform 0.6s ease-out;
+}
+/* Show an ultra-faint technical grid overlay */
+.mode-dev::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.75;
+  transition: opacity 1.2s ease;
+}
+
+/* 2. Media Mode ('media') */
+.mode-media {
+  --ambient-glow: radial-gradient(circle at 50% 50%, rgba(251, 146, 60, 0.12) 0%, transparent 80%);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mode-media .desktop-wallpaper {
+  filter: brightness(0.82) contrast(1.12) saturate(1.35) blur(0px) !important;
+  opacity: 1;
+  transition: filter 1.2s ease-in-out, opacity 1.2s ease-in-out, transform 0.6s ease-out;
+}
+/* Create a cinematic vignette backplate */
+.mode-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+  z-index: 1;
+  transition: all 1.2s ease;
+}
+
+/* 3. System Mode ('sys') */
+.mode-sys {
+  --ambient-glow: radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.1) 0%, transparent 80%);
+  transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mode-sys .desktop-wallpaper {
+  filter: brightness(0.42) contrast(0.96) saturate(0.7) blur(20px) !important;
+  opacity: 0.9;
+  transition: filter 1.2s ease-in-out, opacity 1.2s ease-in-out, transform 0.6s ease-out;
+}
+/* Organic breathing overlay */
+@keyframes breathingGlow {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.45; }
+}
+.mode-sys::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(52, 211, 153, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+  animation: breathingGlow 8s ease-in-out infinite;
+}
+
+

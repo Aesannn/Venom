@@ -1,0 +1,39 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:5173",
+    "distDir": "../../apps/shell/dist"
+  },
+  "package": {
+    "productName": "AETHER-OS",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": true
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "AetherCorp (c) 2026",
+      "identifier": "com.aether.os",
+      "icon": [],
+      "targets": "all"
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 800,
+        "resizable": true,
+        "title": "AETHER-OS Spatial Shell",
+        "width": 1280,
+        "decorations": false,
+        "transparent": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=AETHER-OS AI Cognitive Memory & Semantic Filesystem Indexer
+After=aether-core.service
+Requires=aether-core.service
+
+[Service]
+Type=simple
+ExecStart=/run/current-system/sw/bin/aether-ai-daemon --listen-socket /run/aether/ai.sock
+Restart=always
+RestartSec=5
+Environment=RUST_LOG=info
+Environment=AI_MODEL_PATH=/var/lib/aether/models
+Environment=AETHER_CONTEXT_BACKED=1
+LimitNOFILE=65535
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target

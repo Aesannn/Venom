@@ -1,0 +1,15 @@
+# AETHER-OS Secure Display Manager & Login Session Manager Config
+# Boots directly into the spatial user session greeter seat.
+
+[terminal]
+# The vt to run the greeter on
+vt = 1
+
+[default_session]
+# Launch AETHER kiosk desktop shell inside custom aether-compositor for user aether
+command = "dbus-run-session aether-compositor -- aether-shell-launcher"
+user = "aether"
+
+[initial_session]
+command = "dbus-run-session aether-compositor -- aether-shell-launcher"
+user = "aether"

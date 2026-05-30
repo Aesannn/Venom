@@ -1,0 +1,17 @@
+[Plymouth Theme]
+Name=AETHER-OS Cinematic Boot Theme
+Description=Minimalist, high-framerate dynamic pulsing splash theme with geometric interlocking glyphs
+ModuleName=two-step
+
+[two-step]
+ImageDir=/etc/plymouth/themes/aether-boot
+HorizontalAlignment=0.5
+VerticalAlignment=0.5
+Transition=fade
+TransitionDuration=1.5
+BackgroundStartColor=0x0c0c10
+BackgroundEndColor=0x0a0a0c
+ProgressForegroundColor=0xffffff
+ProgressBackgroundColor=0x1f1f2e
+TitleText=AETHER-OS
+TitleFont=Outfit Light 12

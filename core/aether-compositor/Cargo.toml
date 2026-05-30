@@ -1,0 +1,21 @@
+[package]
+name = "aether-compositor"
+version = "1.0.0"
+edition = "2021"
+authors = ["AETHER-OS Graphics Team"]
+description = "Custom Wayland Compositor and GPU Spatial Scene Graph for AETHER-OS"
+
+[dependencies]
+smithay = { version = "0.3.0", features = ["backend_udev", "backend_libinput", "backend_drm", "backend_winit", "renderer_pixman", "renderer_gl", "xwayland"] }
+wgpu = { version = "0.19.0", features = ["vulkan-portability"] }
+wayland-server = "0.31.0"
+wayland-protocols = { version = "0.31.0", features = ["server"] }
+tokio = { version = "1.36", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+xkbcommon = { version = "0.7.0", features = ["wayland"] }
+udev = "0.8.0"
+libinput = "0.8.0"
+log = "0.4"
+env_logger = "0.10"
+raw-window-handle = "0.6"

@@ -1,0 +1,17 @@
+[Unit]
+Description=AETHER-OS Core System Watchdog & Event Bus Daemon
+After=graphical-session.target dbus.socket
+Partof=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/run/current-system/sw/bin/aether-core-daemon
+Restart=always
+RestartSec=2
+Environment=RUST_LOG=info
+Environment=AETHER_STATE_DIR=/var/lib/aether
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target
