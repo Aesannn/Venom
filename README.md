@@ -4,6 +4,7 @@
 [![Tauri Runtime](https://img.shields.io/badge/Runtime-Tauri%20Rust-3F3F3F?logo=rust&logoColor=white)](https://tauri.app/)
 [![LLM Layer](https://img.shields.io/badge/Cognitive--Layer-Google%20Gemini-blue?logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-▶%20Try%20Aether%20OS-000000?logo=vercel&logoColor=white)](https://venom-os-six.vercel.app/)
 
 > **Aether OS** is a premium, developer-native Spatial Operating System designed for high-performance exocortex mesh computing. Built with a high-fidelity glassmorphic frontend compositor shell (React + TypeScript) and wrapped in a powerful systems engine (Tauri + Rust), it operates as a context-aware workflow compositor driven by **Venom** — its natural speech voice assistant.
 
