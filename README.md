@@ -1,17 +1,17 @@
-# 🐍 Venom OS — The Sentient Spatial Voice Operating System
+# 🌌 Aether OS — The Sentient Spatial Voice Operating System
 
 [![Vite Build](https://img.shields.io/badge/Compositor-Vite%205.4-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tauri Runtime](https://img.shields.io/badge/Runtime-Tauri%20Rust-3F3F3F?logo=rust&logoColor=white)](https://tauri.app/)
 [![LLM Layer](https://img.shields.io/badge/Cognitive--Layer-Google%20Gemini-blue?logo=google-gemini&logoColor=white)](https://deepmind.google/technologies/gemini/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
-> **Venom** is a premium, developer-native Spatial Operating System designed for high-performance exocortex mesh computing. Built with a high-fidelity glassmorphic frontend compositor shell (React + TypeScript) and wrapped in a powerful systems engine (Tauri + Rust), it operates as a context-aware workflow compositor driven by natural speech.
+> **Aether OS** is a premium, developer-native Spatial Operating System designed for high-performance exocortex mesh computing. Built with a high-fidelity glassmorphic frontend compositor shell (React + TypeScript) and wrapped in a powerful systems engine (Tauri + Rust), it operates as a context-aware workflow compositor driven by **Venom** — its natural speech voice assistant.
 
 ---
 
 ## 💎 Core Innovation & Architecture
 
-Venom bridges the gap between raw, native operating system calls and ultra-premium, responsive WebGL/HTML5 user interfaces.
+Aether OS bridges the gap between raw, native operating system calls and ultra-premium, responsive WebGL/HTML5 user interfaces, powered by **Venom**, the ambient voice assistant that understands natural speech intent.
 
 ```mermaid
 graph TD
@@ -26,8 +26,8 @@ graph TD
     Store -->|Compile Listener| Borders[⚡ Glowing Compilation Outlines]
 ```
 
-### 1. 🎙️ Ambient Voice OS (Venom Speech Core)
-Driven by a high-fidelity local passive wake-word recognition engine ("*Venom*"), the system captures natural speech stream transcripts entirely on the edge.
+### 1. 🎙️ Venom — The Ambient Voice Assistant
+Driven by a high-fidelity local passive wake-word recognition engine ("*Venom*"), Aether OS captures natural speech stream transcripts entirely on the edge.
 *   **Voice-Native Geometry Engine:** Command desktop coordinates vocally: *"tile windows"*, *"reset layout"*, *"isolate editor"*, or *"slate telemetry to background"*.
 *   **Contextual Silent Shutdown:** Voice/chat intents gracefully tear down active speech engines and clean up process loops before de-initializing the system wrapper.
 
@@ -55,13 +55,13 @@ Operational modes operate as an active system resource allocator:
 
 ## 🛠️ Launch & Setup Pipeline
 
-Follow these steps to run Venom locally or compile it into hardened desktop production wrappers:
+Follow these steps to run Aether OS locally or compile it into hardened desktop production wrappers:
 
 ### 1. Clone & Prime Environment
 ```bash
 # Clone the repository
-git clone https://github.com/Aesannn/Venom.git
-cd Venom
+git clone https://github.com/Aesannn/AetherOS.git
+cd AetherOS
 
 # Copy secure environment configuration template
 cp .env.example .env
@@ -95,7 +95,7 @@ Vite will package the minimized, compressed production shell into `apps/shell/di
 ---
 
 ## 🪐 Venture Capital & Startup Packaging Checklist
-Venom is built with immediate business-grade monetization potential:
+Aether OS is built with immediate business-grade monetization potential:
 - [x] **BYOK (Bring-Your-Own-Key) Integration:** Eliminates centralized cloud token billing overheads for infinite scalability.
 - [x] **Hardened Tauri Packaging:** Ready to distribute compiled `.msi` (Windows) and `.dmg` (macOS) local packages.
 - [x] **Pure Offline Composites:** Completely de-noised OS. Silence has been restored with fully de-noised button clicks and tap actions for maximum workplace focus.
@@ -104,7 +104,7 @@ Venom is built with immediate business-grade monetization potential:
 
 ## 📂 Project Structure
 ```
-Venom/
+AetherOS/
 ├── apps/
 │   └── shell/               # React + TypeScript frontend compositor
 │       ├── src/

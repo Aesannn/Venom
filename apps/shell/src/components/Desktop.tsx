@@ -315,7 +315,7 @@ export const Desktop: React.FC = () => {
         hasStarted = false;
         
         if (isSystemShutdownRef.current || !store.getState().isBooted) {
-          console.log("Venom Core Shutdown complete. Speech loop terminated.");
+          console.log("Venom Shutdown complete. Speech loop terminated.");
           return;
         }
 

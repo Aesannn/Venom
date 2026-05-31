@@ -460,7 +460,7 @@ class SystemStore {
         ''
       ],
       aiMessages: [
-        { sender: 'aether', text: "Venom Core online, Ivar. Neural links verified. Ready to configure your workspace.", timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }
+        { sender: 'aether', text: "Venom online, Ivar. Aether OS neural links verified. Ready to configure your workspace.", timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) }
       ],
       isAiThinking: false,
       processes: INITIAL_PROCESSES,
@@ -3851,7 +3851,7 @@ class SystemStore {
           replyText = "Invoking neural process visualizer...";
           trigger = () => this.openWindow('visualizer');
         } else if (norm.includes('help') || norm.includes('capabilities') || norm.includes('what can you do')) {
-          replyText = "I am AETHER AI Core, your environmental assistant. I can execute operations in chain. Try saying:\n" +
+          replyText = "I am Venom, your AI voice assistant for Aether OS. I can execute operations in chain. Try saying:\n" +
                       '• "Launch terminal" or "Theme to purple"\n' +
                       '• "Remember developer name is Alex"\n' +
                       '• "Clear workspace load" or "What do you remember?"\n' +
@@ -3874,7 +3874,7 @@ class SystemStore {
             ];
             replyText = jokes[Math.floor(Math.random() * jokes.length)];
           } else if (prompt.includes('who are you') || prompt.includes('your name') || prompt.includes('what is you')) {
-            replyText = "I am Venom, a premium, highly advanced, ultra-sleek operating assistant. My neural matrices are fully synchronized to orchestrate your workspace, Ivar.";
+            replyText = "I am Venom, the premium AI voice assistant powering Aether OS. My neural matrices are fully synchronized to orchestrate your workspace, Ivar.";
           } else if (prompt.includes('how are you') || prompt.includes('how\'s it going') || prompt.includes('status')) {
             replyText = "My cores are running exceptionally cool, Ivar. Neural pathways are fully calibrated, and system memory allocations are stable. Standing by for your commands.";
           } else if (prompt.includes('write a script') || prompt.includes('code') || prompt.includes('javascript') || prompt.includes('typescript') || prompt.includes('python')) {
@@ -3980,7 +3980,7 @@ class SystemStore {
               contents: contentPayload,
               config: {
                 systemInstruction: `
-                  You are Venom, a highly advanced, premium desktop voice operating system core assistant.
+                  You are Venom, the highly advanced, premium AI voice assistant powering Aether OS — a spatial desktop operating system.
                   Your user is Ivar. You must always address him as Ivar.
                   You have full contextual intelligence. You do not have pre-recorded scripts or canned phrases. 
                   Answer any general knowledge, coding, creative, or conversational questions Ivar throws at you completely dynamically on the fly.
@@ -4003,7 +4003,7 @@ class SystemStore {
             // Intercept dynamic AI tool execution calls
             const functionCalls = response.functionCalls;
             if (functionCalls && functionCalls.length > 0) {
-              let toolStatusMsg = "\n\n[Venom OS Executing Agent Triggers]:";
+              let toolStatusMsg = "\n\n[Venom Executing Agent Triggers]:";
               for (const call of functionCalls) {
                 if (call.name === 'launchApp') {
                   const { appName } = call.args as { appName: string };
