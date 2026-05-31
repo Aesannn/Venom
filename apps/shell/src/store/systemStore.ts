@@ -395,10 +395,10 @@ const DEFAULT_VFS: VFSDirectory = {
 };
 
 const INITIAL_WINDOWS: AppWindow[] = [
-  { id: 'ai-chat', title: 'Aether Assistant', icon: 'Bot', isOpen: true, isMinimized: false, isMaximized: false, x: 50, y: 70, width: 380, height: 580, zIndex: 10, minWidth: 320, minHeight: 250 },
-  { id: 'terminal', title: 'Terminal', icon: 'Terminal', isOpen: true, isMinimized: false, isMaximized: false, x: 450, y: 60, width: 620, height: 420, zIndex: 1, minWidth: 320, minHeight: 200 },
+  { id: 'ai-chat', title: 'Aether Assistant', icon: 'Bot', isOpen: false, isMinimized: false, isMaximized: false, x: 50, y: 70, width: 380, height: 580, zIndex: 10, minWidth: 320, minHeight: 250 },
+  { id: 'terminal', title: 'Terminal', icon: 'Terminal', isOpen: false, isMinimized: false, isMaximized: false, x: 450, y: 60, width: 620, height: 420, zIndex: 1, minWidth: 320, minHeight: 200 },
   { id: 'explorer', title: 'Files', icon: 'FolderOpen', isOpen: false, isMinimized: false, isMaximized: false, x: 260, y: 150, width: 680, height: 460, zIndex: 1, minWidth: 320, minHeight: 200 },
-  { id: 'telemetry', title: 'Activity Monitor', icon: 'Activity', isOpen: true, isMinimized: false, isMaximized: false, x: 300, y: 100, width: 600, height: 450, zIndex: 1, minWidth: 320, minHeight: 200 },
+  { id: 'telemetry', title: 'Activity Monitor', icon: 'Activity', isOpen: false, isMinimized: false, isMaximized: false, x: 300, y: 100, width: 600, height: 450, zIndex: 1, minWidth: 320, minHeight: 200 },
   { id: 'browser', title: 'Web Browser', icon: 'Globe', isOpen: false, isMinimized: false, isMaximized: false, x: 180, y: 90, width: 800, height: 500, zIndex: 1, minWidth: 320, minHeight: 250 },
   { id: 'notes', title: 'Notes', icon: 'BookOpen', isOpen: false, isMinimized: false, isMaximized: false, x: 120, y: 120, width: 750, height: 480, zIndex: 1, minWidth: 320, minHeight: 200 },
   { id: 'player', title: 'Audio Player', icon: 'Music', isOpen: false, isMinimized: false, isMaximized: false, x: 500, y: 70, width: 380, height: 500, zIndex: 1, minWidth: 320, minHeight: 200 },
@@ -406,7 +406,7 @@ const INITIAL_WINDOWS: AppWindow[] = [
   { id: 'visualizer', title: 'Process Graph', icon: 'Network', isOpen: false, isMinimized: false, isMaximized: false, x: 200, y: 140, width: 720, height: 480, zIndex: 1, minWidth: 320, minHeight: 200 },
   { id: 'settings', title: 'System Settings', icon: 'Settings', isOpen: false, isMinimized: false, isMaximized: false, x: 220, y: 110, width: 620, height: 480, zIndex: 1, minWidth: 320, minHeight: 200 },
   { id: 'calculator', title: 'Calculator', icon: 'Calculator', isOpen: false, isMinimized: false, isMaximized: false, x: 520, y: 80, width: 340, height: 480, zIndex: 1, minWidth: 300, minHeight: 200 },
-  { id: 'editor', title: 'Code Editor', icon: 'FileCode', isOpen: true, isMinimized: false, isMaximized: false, x: 280, y: 130, width: 720, height: 500, zIndex: 1, minWidth: 320, minHeight: 250 },
+  { id: 'editor', title: 'Code Editor', icon: 'FileCode', isOpen: false, isMinimized: false, isMaximized: false, x: 280, y: 130, width: 720, height: 500, zIndex: 1, minWidth: 320, minHeight: 250 },
   { id: 'marketplace', title: 'Aether Marketplace', icon: 'ShoppingBag', isOpen: false, isMinimized: false, isMaximized: false, x: 240, y: 120, width: 750, height: 500, zIndex: 1, minWidth: 320, minHeight: 200 },
   { id: 'ai-compute-hub', title: 'AI Compute Hub', icon: 'Cpu', isOpen: false, isMinimized: false, isMaximized: false, x: 220, y: 80, width: 900, height: 600, zIndex: 1, minWidth: 400, minHeight: 300 },
   { id: 'swarm-command', title: 'Swarm Command', icon: 'Users', isOpen: false, isMinimized: false, isMaximized: false, x: 200, y: 70, width: 960, height: 640, zIndex: 1, minWidth: 500, minHeight: 350 },

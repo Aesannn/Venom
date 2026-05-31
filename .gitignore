@@ -44,3 +44,5 @@ Desktop.ini
 # Tauri build artifacts
 core/tauri-runtime/target/
 
+
+.vercel
